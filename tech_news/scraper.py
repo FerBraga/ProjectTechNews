@@ -26,14 +26,19 @@ def scrape_novidades(html_content):
 
     try:
         selected = selector.css(".cs-overlay-link::attr(href)").getall()
-        return(selected)
+        return selected
     except Exception:
         return []
 
 
 # Requisito 3
 def scrape_next_page_link(html_content):
-    """Seu código deve vir aqui"""
+
+    link_page = Selector(html_content)
+
+    while link_page:
+        link_page = link_page.css("a.next::attr(href)").get()
+        return link_page
 
 
 # Requisito 4
