@@ -65,7 +65,7 @@ def scrape_noticia(html_content):
 
     return {
         "url": page_link,
-        "title": title.replace('\xa0', ''),
+        "title": title.replace("\xa0", ""),
         "writer": author,
         "summary": cleantext,
         "comments_count": comments_count,
