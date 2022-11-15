@@ -29,9 +29,23 @@ def search_by_date(date):
 
 # Requisito 8
 def search_by_tag(tag):
-    """Seu código deve vir aqui"""
+
+    response = db.news.find(
+        {"tags": {"$regex": tag, "$options": "i"}}
+    )
+
+    titles_found = [(item["title"], item["url"]) for item in response]
+
+    return titles_found
 
 
 # Requisito 9
 def search_by_category(category):
-    pass
+
+    response = db.news.find(
+        {"category": {"$regex": category, "$options": "i"}}
+    )
+
+    titles_found = [(item["title"], item["url"]) for item in response]
+
+    return titles_found
