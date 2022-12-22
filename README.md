@@ -2,7 +2,7 @@ O projeto que tem como principal objetivo fazer consultas em notícias sobre tec
 
 As notícias podem ser obtidas através da raspagem do blog da Trybe.
 
-mountain_bicyclist Habilidades a serem trabalhadas:
+Habilidades a serem trabalhadas:
 
 Utilizar o terminal interativo do Python
 Escrever seus próprios módulos e importá-los em outros códigos
